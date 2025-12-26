@@ -400,6 +400,22 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Updated: Project Formation Notice */}
+      <section className="py-12 bg-gray-50 border-t border-gray-200">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-50 to-amber-100 text-amber-800 rounded-lg mb-6 border border-amber-200">
+              <span className="font-medium">📋 Project Formation Notice</span>
+            </div>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-sm leading-relaxed">
+              Bounce Genesis is a project in formation. The entity 'Bounce Genesis Corps' is planned to be incorporated in Delaware. 
+              All descriptions of structure, services, and operations are forward-looking and based on current planning. 
+              This website represents our strategic vision and intended service offerings.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="container-custom">
