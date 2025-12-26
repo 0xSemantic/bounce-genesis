@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cpu, Heart, Shield, FileCheck, Coins, Clock, Globe, Zap, Users, Target } from 'lucide-react';
+import { Cpu, Heart, Shield, FileCheck, Coins, Clock, Globe, Zap, Users, Target, Code, Wrench, Layers, Briefcase } from 'lucide-react';
 import HeroSection from '../components/shared/HeroSection';
 import SectionHeader from '../components/shared/SectionHeader';
 import GradientCard from '../components/shared/GradientCard';
@@ -14,7 +14,7 @@ const ServicesPage = () => {
       icon: Cpu,
       title: 'LOLA OS',
       subtitle: 'Autonomous Agent Infrastructure',
-      status: 'Live Testing',
+      status: 'Available for Integration',
       statusColor: 'bg-blue-100 text-blue-700',
       description: 'The Android OS for the on-chain agent economy. Build, deploy, and manage autonomous AI agents that interact with any blockchain.',
       features: [
@@ -43,7 +43,7 @@ const ServicesPage = () => {
       icon: Heart,
       title: 'AURA Systems',
       subtitle: 'Emotional Intelligence Layer',
-      status: 'Starting Q2 2026',
+      status: 'Available Q2 2026',
       statusColor: 'bg-purple-100 text-purple-700',
       description: 'Making every AI interaction feel genuinely human. Real-time emotion detection and adaptive response generation.',
       features: [
@@ -114,13 +114,40 @@ const ServicesPage = () => {
 
   const activeServiceData = services[activeService];
 
+  const consultingServices = [
+    {
+      icon: Code,
+      title: 'Custom Development',
+      description: 'Bespoke software solutions tailored to your specific needs.',
+      price: 'Project-based',
+    },
+    {
+      icon: Wrench,
+      title: 'System Integration',
+      description: 'Seamless integration of our systems into your existing infrastructure.',
+      price: 'Hourly/Project',
+    },
+    {
+      icon: Layers,
+      title: 'Architecture Consulting',
+      description: 'Expert guidance on system architecture and technology strategy.',
+      price: 'Retainer/Hourly',
+    },
+    {
+      icon: Briefcase,
+      title: 'Enterprise Implementation',
+      description: 'Full-scale deployment and management of enterprise solutions.',
+      price: 'Enterprise Quote',
+    },
+  ];
+
   return (
     <>
       {/* Hero Section */}
       <HeroSection
-        title="Strategic Service Stack"
-        subtitle="Foundational Layers for the Digital Economy"
-        description="We build the core infrastructure layers that power the next generation of applications. Each division operates independently under the Bounce Genesis umbrella."
+        title="Technology Solutions & Services"
+        subtitle="Enterprise-Grade Development & Integration"
+        description="We provide expert consulting, custom development, and seamless integration services for cutting-edge blockchain and AI solutions."
         gradient="from-gray-900 to-gray-800"
       />
 
@@ -138,7 +165,7 @@ const ServicesPage = () => {
             >
               <div className="flex items-center">
                 <Cpu size={20} className="mr-2" />
-                LOLA OS (Current)
+                LOLA OS Integration
               </div>
             </button>
             <button
@@ -151,7 +178,7 @@ const ServicesPage = () => {
             >
               <div className="flex items-center">
                 <Heart size={20} className="mr-2" />
-                AURA Systems (Q2 2026)
+                AURA Systems Development
               </div>
             </button>
           </div>
@@ -221,21 +248,21 @@ const ServicesPage = () => {
               </div>
             </div>
 
-            {/* Right Column - CTA & Integration */}
+            {/* Right Column - Service Options */}
             <div>
               <div className="sticky top-24">
                 <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 mb-6">
-                  <h3 className="text-xl font-bold text-gray-50 mb-4">Development Status</h3>
+                  <h3 className="text-xl font-bold text-gray-50 mb-4">Service Status</h3>
                   <div className="space-y-4">
                     <div className="p-4 bg-gray-800/50 rounded-lg">
                       <div className="text-sm text-gray-300 mb-2">Current Phase</div>
                       <div className="text-gray-50 font-medium">
-                        {activeService === 'lola' ? 'Internal Testing' : 'Planning Q2 2026'}
+                        {activeService === 'lola' ? 'Available for Integration' : 'Available Q2 2026'}
                       </div>
                     </div>
                     <div className="p-4 bg-gray-800/50 rounded-lg">
-                      <div className="text-sm text-gray-300 mb-2">Funding Model</div>
-                      <div className="text-gray-50 font-medium">Grants & Strategic Partnerships</div>
+                      <div className="text-sm text-gray-300 mb-2">Service Model</div>
+                      <div className="text-gray-50 font-medium">Consulting & Development</div>
                     </div>
                     <div className="p-4 bg-gray-800/50 rounded-lg">
                       <div className="text-sm text-gray-300 mb-2">Entity Structure</div>
@@ -245,21 +272,21 @@ const ServicesPage = () => {
                 </div>
 
                 <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Support Development</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Development Services</h3>
                   <p className="text-gray-600 mb-6">
-                    We're currently seeking grants and strategic partnerships to advance development.
+                    We offer custom development, integration, and consulting services for enterprise implementations.
                   </p>
                   <button
                     onClick={() => setContactModalOpen(true)}
                     className="w-full py-3.5 bg-gray-900 hover:bg-gray-800 text-gray-50 font-semibold rounded-lg transition-colors mb-4"
                   >
-                    {activeService === 'lola' ? 'Provide Grants For LOLA' : 'Express AURA Interest'}
+                    {activeService === 'lola' ? 'Request LOLA Integration' : 'Plan AURA Implementation'}
                   </button>
                   <button
                     onClick={() => setContactModalOpen(true)}
                     className="w-full py-3.5 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
                   >
-                    Schedule Technical Briefing
+                    Schedule Technical Consultation
                   </button>
                 </div>
               </div>
@@ -268,11 +295,37 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Future Services */}
+      {/* Consulting Services */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <SectionHeader
-            title="Future Service Stack"
+            title="Professional Consulting Services"
+            subtitle="Expert Guidance & Implementation"
+            description="Our team provides comprehensive consulting and development services to help you implement cutting-edge solutions."
+            align="center"
+            className="mb-16"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {consultingServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl border border-gray-200 p-6 hover:border-gray-300 transition-colors">
+                <div className="p-3 rounded-lg bg-gray-100 w-fit mb-4">
+                  <service.icon size={24} className="text-gray-700" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-gray-600 text-sm mb-4">{service.description}</p>
+                <div className="text-sm font-medium text-gray-700">{service.price}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Future Services */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <SectionHeader
+            title="Future Technology Stack"
             subtitle="The Complete Vertical Integration"
             description="Our strategic vision includes additional layers that complete the digital existence ecosystem."
             align="center"
@@ -294,17 +347,17 @@ const ServicesPage = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <div className="bg-white rounded-2xl p-8 max-w-2xl mx-auto border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Ecosystem Architecture</h3>
+            <div className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Technology Ecosystem</h3>
               <p className="text-gray-600 mb-6">
-                Each division operates as an independent entity while contributing to the overall Bounce Genesis vision.
-                This structure allows focused development while maintaining strategic alignment.
+                Each division represents a specialized technology domain, allowing us to provide comprehensive solutions
+                while maintaining deep expertise in each area.
               </p>
               <div className="flex items-center justify-center space-x-4 text-gray-500">
                 <Users size={20} />
-                <span className="text-sm">Independent legal entities</span>
+                <span className="text-sm">Expert technology teams</span>
                 <Target size={20} />
-                <span className="text-sm">Strategic umbrella oversight</span>
+                <span className="text-sm">Vertical specialization</span>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronRight, Sparkles, Zap, Globe, Shield, Cpu, Heart, Users, Target, Building } from 'lucide-react';
+import { ArrowRight, ChevronRight, Sparkles, Zap, Globe, Shield, Cpu, Heart, Users, Target, Building, Code, Wrench, Layers } from 'lucide-react';
 import HeroSection from '../components/shared/HeroSection';
 import SectionHeader from '../components/shared/SectionHeader';
 import GradientCard from '../components/shared/GradientCard';
@@ -46,23 +46,23 @@ const HomePage = () => {
     { value: '1', label: 'Unified Organism', description: 'Seven divisions, one system' },
   ];
 
-  const developmentStrategy = [
+  const serviceOfferings = [
     {
-      icon: Building,
-      title: 'Strategic Development',
-      description: 'Building foundational infrastructure through focused research and development.',
+      icon: Code,
+      title: 'Enterprise Development',
+      description: 'Custom software solutions and enterprise-grade system development.',
       color: 'text-blue-500',
     },
     {
-      icon: Users,
-      title: 'Ecosystem Partnerships',
-      description: 'Collaborations with forward-thinking organizations and technology leaders.',
+      icon: Wrench,
+      title: 'System Integration',
+      description: 'Seamless integration of our systems with your existing infrastructure.',
       color: 'text-purple-500',
     },
     {
-      icon: Target,
-      title: 'Market Positioning',
-      description: 'First-mover advantage in the autonomous agent infrastructure space.',
+      icon: Layers,
+      title: 'Technical Consulting',
+      description: 'Expert guidance on blockchain, AI, and autonomous agent implementations.',
       color: 'text-emerald-500',
     },
   ];
@@ -73,7 +73,7 @@ const HomePage = () => {
       <HeroSection
         title="The Operating System for Digital Existence"
         subtitle="Seven vertical divisions. One unified organism. One future."
-        description="Bounce Genesis Corps is building the complete stack for the next generation of digital economy through strategic development and partnerships."
+        description="Bounce Genesis Corps builds the complete stack for the next generation of digital economy through strategic development and professional services."
         primaryButton={{
           text: 'Explore Current Build',
           onClick: () => window.location.href = '/current-build',
@@ -93,7 +93,7 @@ const HomePage = () => {
           <SectionHeader
             title="We Are Not Building Products"
             subtitle="We Are Building One Organism"
-            description="Each division is an organ in a single body—autonomous but interconnected, powerful but coordinated."
+            description="Each division is an organ in a single body, autonomous but interconnected, powerful but coordinated."
             align="center"
             className="mb-16"
           />
@@ -124,24 +124,24 @@ const HomePage = () => {
             ))}
           </div>
 
-          {/* Development Strategy - Replaced Funding Strategy */}
+          {/* Service Offerings */}
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
             <SectionHeader
-              title="Development Strategy"
-              subtitle="Strategic Growth & Market Leadership"
-              description="We are advancing our long-term vision through strategic development and ecosystem partnerships."
+              title="Professional Services"
+              subtitle="Building Solutions That Matter"
+              description="We offer specialized consulting and development services to help organizations implement cutting-edge technology solutions."
               align="center"
               className="mb-12"
             />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {developmentStrategy.map((strategy, index) => (
+              {serviceOfferings.map((service, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl border border-gray-200">
-                  <div className={`p-3 rounded-lg bg-gray-100 w-fit mb-4 ${strategy.color.replace('text-', '')}`}>
-                    <strategy.icon size={24} className={strategy.color} />
+                  <div className={`p-3 rounded-lg bg-gray-100 w-fit mb-4 ${service.color.replace('text-', '')}`}>
+                    <service.icon size={24} className={service.color} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{strategy.title}</h3>
-                  <p className="text-gray-600">{strategy.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600">{service.description}</p>
                 </div>
               ))}
             </div>
@@ -153,21 +153,21 @@ const HomePage = () => {
       <LolaShowcase />
       <AuraPreview />
 
-      {/* CTA Section - Removed grant-focused wording */}
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-full mb-6">
               <Sparkles size={14} className="text-gray-300 mr-2" />
-              <span className="text-sm text-gray-300">Join Us in Building the Future</span>
+              <span className="text-sm text-gray-300">Expert Technology Solutions</span>
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-50 mb-6">
-              Build the Foundation of Digital Existence
+              Transform Your Digital Infrastructure
             </h2>
             
             <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-              We're seeking strategic partners and collaborators to advance our mission of building the complete stack for the next generation of digital economy.
+              Partner with us for expert consulting, custom development, and seamless integration of cutting-edge blockchain and AI solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -175,22 +175,22 @@ const HomePage = () => {
                 onClick={() => setContactModalOpen(true)}
                 className="px-8 py-4 bg-gray-50 hover:bg-gray-100 text-gray-900 font-semibold rounded-lg transition-all hover:scale-105 flex items-center justify-center"
               >
-                Get in Touch
+                Start a Project
                 <ArrowRight className="ml-2" size={20} />
               </button>
               
               <Link
-                to="/about"
+                to="/services"
                 className="px-8 py-4 border-2 border-gray-600 hover:border-gray-500 text-gray-300 hover:text-gray-200 font-semibold rounded-lg transition-colors flex items-center justify-center"
               >
-                Learn About Our Vision
+                View Our Services
                 <ChevronRight className="ml-2" size={20} />
               </Link>
             </div>
             
             <div className="mt-12 pt-8 border-t border-gray-700">
               <p className="text-gray-400 text-sm">
-                Current focus: LOLA OS (Internal Testing) • AURA Systems (Starting Q2 2026) • Strategic development
+                Current focus: LOLA OS (Internal Testing) • AURA Systems (Starting Q2 2026) • Strategic Development
               </p>
             </div>
           </div>

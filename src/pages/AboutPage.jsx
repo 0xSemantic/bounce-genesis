@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, Target, Eye, Lock, Zap, Globe, Cpu, Heart, Building, Rocket } from 'lucide-react';
+import { Users, Target, Eye, Lock, Zap, Globe, Cpu, Heart, Building, Rocket, Github, Twitter, Linkedin, Mail, MessageCircle } from 'lucide-react';
 import HeroSection from '../components/shared/HeroSection';
 import SectionHeader from '../components/shared/SectionHeader';
 import GradientCard from '../components/shared/GradientCard';
@@ -12,47 +12,52 @@ const AboutPage = () => {
     {
       icon: Users,
       title: 'One Commander',
-      description: '@0xSemantic has final say on all strategic decisions. Clear, unified vision execution.',
+      description: '@0xSemantic provides strategic and architectural direction, ensuring cohesive execution across the integrated technology stack.',
       gradient: 'from-gray-800 to-gray-900',
     },
     {
       icon: Lock,
-      title: 'No External Co-Founders',
-      description: 'All equity stays within the Corps. Complete alignment, no dilution of vision.',
+      title: 'Integrated Equity Model',
+      description: 'Strategic control is maintained within the organization to ensure long-term vision alignment and project continuity.',
       gradient: 'from-gray-700 to-gray-800',
     },
     {
       icon: Zap,
-      title: 'Revenue Feeds the Flywheel',
-      description: 'No division keeps 100%. All profits reinvested into the organism-level growth.',
+      title: 'Revenue Funds Innovation',
+      description: 'Resources are strategically reinvested across the ecosystem to drive continuous technological advancement and service offerings.',
       gradient: 'from-gray-600 to-gray-700',
     },
     {
       icon: Eye,
       title: 'Zero Data Silos',
-      description: 'All data shared internally. Complete transparency across all seven divisions.',
+      description: 'Complete data transparency and interoperability across all seven divisions for integrated solution delivery.',
       gradient: 'from-gray-500 to-gray-600',
     },
     {
       icon: Target,
       title: 'We Own the Primitives',
-      description: 'Never rely on competitors for core layers. Complete vertical integration.',
+      description: 'Complete vertical integration ensures control over core technology layers and solution reliability.',
       gradient: 'from-gray-400 to-gray-500',
     },
     {
       icon: Globe,
       title: 'Infrastructure, Not Competition',
-      description: 'We never compete with our users. We build the layers they build upon.',
+      description: 'We provide the foundational layers upon which our clients build and innovate.',
       gradient: 'from-gray-300 to-gray-400',
     },
   ];
 
   const leadership = [
     {
-      name: '@0xSemantic',
-      role: 'Commander & Architect',
-      description: 'Visionary behind the complete stack. Formerly built multiple successful ventures in AI, blockchain, and infrastructure.',
-      tags: ['Strategy', 'Architecture', 'Execution'],
+      name: '@0xSemantic (Levi Chinecherem Chidi)',
+      role: 'Chief Architect & Executive Director',
+      description: 'Architect of the complete technology stack. Provides executive oversight, solution architecture, and ensures operational excellence across all integrated divisions.',
+      tags: ['Enterprise Architecture', 'Strategic Technology', 'Solution Design'],
+      socials: [
+        { icon: Github, link: 'https://github.com/0xSemantic', label: 'GitHub' },
+        { icon: Twitter, link: 'https://twitter.com/0xSemantic', label: 'Twitter' },
+        { icon: Linkedin, link: 'https://linkedin.com/in/0xSemantic', label: 'LinkedIn' },
+      ]
     },
   ];
 
@@ -60,21 +65,21 @@ const AboutPage = () => {
     {
       name: 'Era 1: Foundational Trinity',
       years: '2025-2027',
-      description: 'Build the brain, heart, and immune system of the digital organism.',
+      description: 'Establishing the core intelligent, emotional, and security layers of our integrated service offerings.',
       divisions: ['LOLA', 'AURA', 'SHIELD'],
       focus: 'Intelligence, Emotion, Protection',
     },
     {
       name: 'Era 2: Trust Infrastructure',
       years: '2028-2030',
-      description: 'Capture truth and liquidity layers for regulatory compliance and real-world asset integration.',
+      description: 'Introducing compliance, verification, and real-world asset integration services.',
       divisions: ['SOVEREIGN', 'SARVA'],
       focus: 'Truth, Liquidity',
     },
     {
       name: 'Era 3: Settlement Organism',
       years: '2030-2035',
-      description: 'Close the loop with time and planetary settlement layers.',
+      description: 'Delivering complete temporal and planetary-scale settlement solutions.',
       divisions: ['MOMENTA', 'BOUNCE'],
       focus: 'Time, Settlement',
     },
@@ -84,20 +89,46 @@ const AboutPage = () => {
     {
       icon: Building,
       title: 'Bounce Genesis Corps',
-      description: 'The umbrella C-Corp that holds strategic control and coordinates all divisions.',
-      type: 'Delaware C-Corp',
+      description: 'The strategic oversight entity that coordinates technology development and professional service delivery across the integrated ecosystem.',
+      type: 'Technology & Solutions Provider',
+      details: 'Strategic technology oversight & service integration'
     },
     {
       icon: Cpu,
-      title: 'Independent Divisions',
-      description: 'Each division operates as its own legal entity with independent development.',
-      type: 'LLC / Ltd / Foundation',
+      title: 'Specialized Service Divisions',
+      description: 'Each technology division operates as a specialized unit, focusing on distinct service verticals while contributing to integrated client solutions.',
+      type: 'Specialized Service Units',
+      details: 'Focused verticals with integrated solution delivery'
     },
     {
       icon: Users,
-      title: 'Strategic Oversight',
-      description: 'Centralized vision and coordination while maintaining operational independence.',
-      type: 'Umbrella Management',
+      title: 'Integrated Service Delivery',
+      description: 'Resources and expertise are coordinated across divisions to deliver comprehensive technology solutions and consulting services.',
+      type: 'Professional Services',
+      details: 'Cross-division expertise for client solutions'
+    },
+  ];
+
+  const serviceModel = [
+    {
+      title: 'Specialized Service Divisions',
+      description: 'Each division focuses on delivering distinct, high-value technology solutions and consulting.',
+      color: 'bg-gray-100 border-gray-200',
+    },
+    {
+      title: 'Integrated Service Delivery',
+      description: 'Divisions collaborate under the strategic umbrella to provide comprehensive client solutions.',
+      color: 'bg-blue-50 border-blue-200',
+    },
+    {
+      title: 'Continuous Innovation',
+      description: 'Resources are allocated to drive ongoing technological advancement and service enhancement.',
+      color: 'bg-green-50 border-green-200',
+    },
+    {
+      title: 'Operational Excellence',
+      description: 'Divisions maintain focused operations while contributing to the broader technology vision.',
+      color: 'bg-purple-50 border-purple-200',
     },
   ];
 
@@ -106,8 +137,8 @@ const AboutPage = () => {
       {/* Hero Section */}
       <HeroSection
         title="From Genesis, Everything Bounces"
-        subtitle="The Marine Corps of Technology"
-        description="We are seven elite divisions under one command structure, each operating as an independent entity while contributing to the unified vision."
+        subtitle="Integrated Technology Solutions"
+        description="We are a federation of elite technology divisions under unified strategic direction, each delivering specialized services while contributing to comprehensive client solutions."
         gradient="from-gray-900 to-gray-800"
       />
 
@@ -115,14 +146,14 @@ const AboutPage = () => {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <SectionHeader
-            title="Entity Architecture"
-            subtitle="Independent Divisions, Unified Vision"
-            description="Each division operates as its own legal entity with independent development, all coordinated under the Bounce Genesis umbrella."
+            title="Organizational Architecture"
+            subtitle="Specialized Divisions, Integrated Solutions"
+            description="Each technology division operates with focused expertise, all coordinated under the Bounce Genesis strategic umbrella to deliver comprehensive professional services."
             align="center"
             className="mb-16"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {entityStructure.map((entity, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
                 <div className="flex items-center mb-6">
@@ -136,30 +167,47 @@ const AboutPage = () => {
                     </span>
                   </div>
                 </div>
-                <p className="text-gray-600">{entity.description}</p>
+                <p className="text-gray-600 mb-4">{entity.description}</p>
+                <p className="text-sm text-gray-500 italic">{entity.details}</p>
               </div>
             ))}
           </div>
 
-          {/* Development Strategy - Replaced Funding Strategy */}
+          {/* Service Model */}
+          <div className="mb-20">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Services Model</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {serviceModel.map((item, index) => (
+                <div key={index} className={`border rounded-2xl p-6 ${item.color}`}>
+                  <div className="text-lg font-bold text-gray-900 mb-2">{item.title}</div>
+                  <p className="text-gray-600 text-sm">{item.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 text-center text-gray-500 text-sm">
+              <p>Specialized divisions → Integrated service delivery → Comprehensive client solutions</p>
+            </div>
+          </div>
+
+          {/* Development Strategy */}
           <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 md:p-12 mb-20">
-            <h3 className="text-2xl font-bold text-gray-50 mb-6 text-center">Development Strategy</h3>
+            <h3 className="text-2xl font-bold text-gray-50 mb-6 text-center">Strategic Technology Model</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-50 mb-2">Strategic</div>
-                <div className="text-gray-400">Long-term vision focus</div>
+                <div className="text-3xl font-bold text-gray-50 mb-2">Specialized</div>
+                <div className="text-gray-400">Division-level expertise</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-50 mb-2">Partnerships</div>
-                <div className="text-gray-400">Ecosystem collaborations</div>
+                <div className="text-3xl font-bold text-gray-50 mb-2">Integrated</div>
+                <div className="text-gray-400">Unified strategic direction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-50 mb-2">Independent</div>
-                <div className="text-gray-400">Division-level development</div>
+                <div className="text-3xl font-bold text-gray-50 mb-2">Client-Focused</div>
+                <div className="text-gray-400">Tailored solution delivery</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-50 mb-2">Sustainable</div>
-                <div className="text-gray-400">Revenue-driven growth</div>
+                <div className="text-3xl font-bold text-gray-50 mb-2">Innovation</div>
+                <div className="text-gray-400">Continuous advancement</div>
               </div>
             </div>
           </div>
@@ -173,7 +221,7 @@ const AboutPage = () => {
             <SectionHeader
               title="Our Genesis Vision"
               subtitle="Why Bounce Genesis Corps Exists"
-              description="We own every layer of digital existence. No other entity on Earth is attempting this full vertical stack."
+              description="We deliver every layer of modern digital existence. No other provider offers this complete vertical technology stack as professional services."
               align="center"
               className="mb-16"
             />
@@ -181,29 +229,29 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
               <div className="lg:col-span-2">
                 <div className="bg-white rounded-2xl p-8 border border-gray-200">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">The Complete Stack</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">The Complete Technology Stack</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Intelligence (who acts), Emotion (who feels), Security (who survives), 
-                    Truth (who proves), Liquidity (who owns reality), Time (who knows when to stop), 
-                    and Settlement (who carries the weight of the world).
+                    We provide professional services across the full spectrum: Intelligence (autonomous systems), 
+                    Emotion (human-AI interaction), Security (digital protection), Truth (compliance verification), 
+                    Liquidity (asset digitization), Time (temporal systems), and Settlement (planetary-scale operations).
                   </p>
                   <div className="flex items-center text-gray-500">
-                    <span className="text-sm font-medium">Vertical Integration • Complete Control • Maximum Efficiency</span>
+                    <span className="text-sm font-medium">Vertical Integration • Complete Solutions • Professional Delivery</span>
                   </div>
                 </div>
               </div>
               
               <div className="space-y-6">
                 <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6">
-                  <h4 className="text-gray-50 font-bold text-lg mb-2">One Organism</h4>
+                  <h4 className="text-gray-50 font-bold text-lg mb-2">Specialized Divisions</h4>
                   <p className="text-gray-300 text-sm">
-                    Seven divisions, one biological system. Each strengthens the others.
+                    Each division delivers focused expertise as part of our integrated service offerings.
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-6">
-                  <h4 className="text-gray-50 font-bold text-lg mb-2">No Dependencies</h4>
+                  <h4 className="text-gray-50 font-bold text-lg mb-2">Strategic Coordination</h4>
                   <p className="text-gray-300 text-sm">
-                    We own the entire stack. No third-party risks or bottlenecks.
+                    Unified strategic direction ensures cohesive delivery of comprehensive technology solutions.
                   </p>
                 </div>
               </div>
@@ -211,30 +259,33 @@ const AboutPage = () => {
 
             {/* Commandments */}
             <SectionHeader
-              title="Internal Commandments"
-              subtitle="Non-Negotiables (Locked Forever)"
+              title="Core Principles"
+              subtitle="Foundational Operating Principles"
               align="center"
               className="mb-12"
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
               {commandments.map((commandment, index) => (
-                <GradientCard
+                <div
                   key={index}
-                  icon={commandment.icon}
-                  title={commandment.title}
-                  description={commandment.description}
-                  gradient={`bg-gradient-to-br ${commandment.gradient}`}
-                  className="text-gray-50 border-0"
-                  border={false}
-                />
+                  className={`bg-gradient-to-br ${commandment.gradient} rounded-2xl p-6 text-gray-50 border-0`}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="p-2 bg-white/10 rounded-lg mr-3">
+                      <commandment.icon size={20} className="text-gray-50" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-50">{commandment.title}</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm">{commandment.description}</p>
+                </div>
               ))}
             </div>
 
             {/* Three Eras */}
             <SectionHeader
-              title="The 10-Year Campaign"
-              subtitle="Strategic Rollout Across Three Eras"
+              title="Strategic Technology Roadmap"
+              subtitle="Phased Service Offering Development"
               align="center"
               className="mb-12"
             />
@@ -282,21 +333,88 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* CTA Section - Removed grant-focused wording */}
+      {/* Leadership Section */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <SectionHeader
+            title="Executive Leadership"
+            subtitle="Technology Architecture & Strategic Direction"
+            description="Providing the vision and technical direction that coordinates specialized divisions to deliver integrated client solutions."
+            align="center"
+            className="mb-16"
+          />
+
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+              <div className="flex flex-col md:flex-row items-start md:items-center mb-6">
+                <div className="mb-4 md:mb-0 md:mr-6">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">LC</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900">{leadership[0].name}</h3>
+                  <p className="text-gray-600 mt-1">{leadership[0].role}</p>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {leadership[0].tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 mb-6 leading-relaxed">{leadership[0].description}</p>
+              
+              <div className="pt-6 border-t border-gray-200">
+                <h4 className="text-sm font-semibold text-gray-700 mb-3">Executive Contact</h4>
+                <div className="flex flex-wrap gap-3">
+                  {leadership[0].socials.map((social, idx) => (
+                    <a
+                      key={idx}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors group"
+                    >
+                      <social.icon size={16} className="mr-2" />
+                      <span className="text-sm font-medium">{social.label}</span>
+                      <span className="ml-2 text-xs text-gray-500 group-hover:text-gray-700">→</span>
+                    </a>
+                  ))}
+                  <button
+                    onClick={() => setContactModalOpen(true)}
+                    className="flex items-center px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg transition-colors"
+                  >
+                    <MessageCircle size={16} className="mr-2" />
+                    <span className="text-sm font-medium">Discuss Solutions</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-50 mb-6">
-              Partner with Us
+              Engage with Integrated Technology Solutions
             </h2>
             <p className="text-xl text-gray-300 mb-10">
-              We're seeking strategic partners and collaborators to advance our long-term vision.
+              We provide professional consulting, software development, and enterprise integration services across our ecosystem of specialized technology divisions.
             </p>
             <button
               onClick={() => setContactModalOpen(true)}
               className="px-8 py-4 bg-gray-50 hover:bg-gray-100 text-gray-900 font-semibold rounded-lg transition-all hover:scale-105"
             >
-              Contact Us
+              Discuss Your Technology Needs
             </button>
           </div>
         </div>

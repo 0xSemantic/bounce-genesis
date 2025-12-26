@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from '../../assets/logo.png'; // Import the logo
 
 const Navigation = ({ setContactModalOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,10 +30,14 @@ const Navigation = ({ setContactModalOpen }) => {
     <nav className="fixed w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
       <div className="container-custom">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-gray-200 to-gray-800 rounded-lg flex items-center justify-center">
-              <span className="text-gray-900 font-bold text-xl">B</span>
+          {/* Logo with image */}
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="flex items-center justify-center">
+              <img 
+                src={logo} 
+                alt="Bounce Genesis Corps Logo" 
+                className="h-10 w-auto object-contain" // Changed to maintain aspect ratio
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-gray-50 font-bold text-xl tracking-tight">Bounce Genesis</span>

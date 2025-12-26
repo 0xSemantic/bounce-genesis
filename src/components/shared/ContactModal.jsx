@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { X, MessageCircle, Linkedin, Mail, Phone, Building, Zap, Users } from 'lucide-react';
+import { X, MessageCircle, Linkedin, Mail, Phone, Github, Twitter, Building, Users, ExternalLink, Code, Wrench, Layers } from 'lucide-react';
 
 const ContactModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     organization: '',
-    interest: '',
+    projectType: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,12 +19,12 @@ const ContactModal = ({ isOpen, onClose }) => {
     
     // Format the form data into a readable message for WhatsApp
     const whatsappMessage = `
-*New Contact Form Submission*
+*New Project Inquiry*
 
 *Name:* ${formData.name}
 *Organization:* ${formData.organization}
 *Email:* ${formData.email}
-*Interest:* ${formData.interest}
+*Project Type:* ${formData.projectType}
 *Message:*
 ${formData.message}
 
@@ -45,7 +45,7 @@ ${formData.message}
     setTimeout(() => {
       setIsSubmitting(false);
       onClose();
-      setFormData({ name: '', email: '', organization: '', interest: '', message: '' });
+      setFormData({ name: '', email: '', organization: '', projectType: '', message: '' });
     }, 500);
   };
 
@@ -58,7 +58,7 @@ ${formData.message}
 
   // WhatsApp contact method (kept separate for direct WhatsApp button)
   const directWhatsappMessage = encodeURIComponent(
-    `Hi Levi,\n\nI'm interested in Bounce Genesis Corps and would like to discuss partnership opportunities.\n\nBest regards,`
+    `Hi Levi,\n\nI'm interested in your development and consulting services. Could we discuss my project requirements?\n\nBest regards,`
   );
   const directWhatsappUrl = `https://wa.me/${whatsappNumber}?text=${directWhatsappMessage}`;
 
@@ -68,28 +68,21 @@ ${formData.message}
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      description: 'Direct communication with leadership',
+      description: 'Direct consultation with our team',
       action: () => window.open(directWhatsappUrl, '_blank'),
       color: 'bg-green-500/10 text-green-500',
     },
     {
-      icon: Linkedin,
-      title: 'LinkedIn',
-      description: 'Professional network connection',
-      action: () => window.open('https://linkedin.com/in/0xSemantic', '_blank'),
-      color: 'bg-blue-500/10 text-blue-500',
-    },
-    {
       icon: Mail,
       title: 'Email',
-      description: 'Send us an email for detailed discussions',
+      description: 'Detailed project discussions',
       action: () => window.location.href = 'mailto:levi@bouncegenesis.com',
       color: 'bg-gray-500/10 text-gray-500',
     },
     {
       icon: Phone,
       title: 'Phone',
-      description: 'Scheduled calls for serious discussions',
+      description: 'Scheduled technical consultations',
       details: '+234 905 128 4707',
       action: () => {
         navigator.clipboard.writeText(whatsappNumber);
@@ -99,15 +92,33 @@ ${formData.message}
     },
   ];
 
-  const interestTypes = [
-    'Strategic Partnership',
-    'Investment Inquiry',
-    'Technical Collaboration',
-    'Request Demo',
-    'Enterprise Development',
-    'Developer Access',
-    'General Inquiry',
-    'Media/Press',
+  const founderSocials = [
+    {
+      icon: Github,
+      label: 'GitHub',
+      handle: '0xSemantic',
+      link: 'https://github.com/0xSemantic',
+      color: 'bg-gray-800 text-white',
+    },
+    {
+      icon: Linkedin,
+      label: 'LinkedIn',
+      handle: 'Levi Chidi',
+      link: 'https://linkedin.com/in/0xSemantic',
+      color: 'bg-blue-600 text-white',
+    },
+  ];
+
+  const projectTypes = [
+    'Custom Software Development',
+    'Enterprise Integration',
+    'Blockchain Solutions',
+    'AI & Machine Learning',
+    'Technical Consulting',
+    'System Architecture',
+    'LOLA OS Implementation',
+    'AURA Systems Development',
+    'Other Professional Services',
   ];
 
   return (
@@ -117,8 +128,8 @@ ${formData.message}
         <div className="sticky top-0 bg-gray-50 px-8 py-6 border-b border-gray-200 rounded-t-2xl">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">Get in Touch</h2>
-              <p className="text-gray-600 mt-1">Partner with us to build the future of digital infrastructure</p>
+              <h2 className="text-2xl font-bold text-gray-900">Start a Project</h2>
+              <p className="text-gray-600 mt-1">Discuss your development and consulting needs with our team</p>
             </div>
             <button
               onClick={onClose}
@@ -133,7 +144,7 @@ ${formData.message}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Methods */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-6">Direct Contact Channels</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-6">Direct Contact</h3>
               <div className="space-y-4">
                 {contactMethods.map((method, index) => (
                   <button
@@ -162,55 +173,59 @@ ${formData.message}
                 ))}
               </div>
 
-              {/* Commander Info */}
+              {/* Technical Director Info */}
               <div className="mt-8 p-6 bg-gray-900 rounded-xl">
-                <h4 className="text-gray-50 font-semibold mb-2">Commander Contact</h4>
+                <h4 className="text-gray-50 font-semibold mb-2">Technical Director</h4>
                 <p className="text-gray-400 text-sm mb-4">
-                  Direct access to @0xSemantic for strategic discussions
+                  Direct access to @0xSemantic for technical consultations
                 </p>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs text-gray-500">GitHub:</span>
-                    <a 
-                      href="https://github.com/0xSemantic" 
-                      target="_blank" 
+                <div className="space-y-3">
+                  {founderSocials.map((social, idx) => (
+                    <a
+                      key={idx}
+                      href={social.link}
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-gray-50 text-sm"
+                      className="flex items-center justify-between p-3 bg-gray-800/50 hover:bg-gray-800 rounded-lg transition-colors group"
                     >
-                      0xSemantic
+                      <div className="flex items-center">
+                        <div className={`p-2 rounded-lg ${social.color} mr-3`}>
+                          <social.icon size={16} />
+                        </div>
+                        <div>
+                          <div className="text-sm font-medium text-gray-300">{social.label}</div>
+                          <div className="text-xs text-gray-400">{social.handle}</div>
+                        </div>
+                      </div>
+                      <ExternalLink size={14} className="text-gray-400 group-hover:text-gray-300" />
                     </a>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs text-gray-500">Twitter:</span>
-                    <a 
-                      href="https://twitter.com/0xSemantic" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-gray-50 text-sm"
-                    >
-                      @0xSemantic
-                    </a>
-                  </div>
+                  ))}
                 </div>
               </div>
 
-              {/* WhatsApp Instructions */}
-              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <div className="flex items-start">
-                  <MessageCircle className="text-green-500 mr-3 mt-0.5" size={18} />
-                  <div>
-                    <p className="text-sm text-green-800 font-medium mb-1">Form Submissions via WhatsApp</p>
-                    <p className="text-xs text-green-700">
-                      When you submit the form, it will open WhatsApp with your message pre-filled. Just hit send to contact us directly!
-                    </p>
+              {/* Quick Services */}
+              <div className="mt-6 bg-white rounded-xl border border-gray-200 p-4">
+                <h4 className="text-sm font-semibold text-gray-900 mb-3">Common Services</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Code size={14} className="mr-2 text-gray-400" />
+                    <span>Custom Software Development</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Wrench size={14} className="mr-2 text-gray-400" />
+                    <span>System Integration</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Layers size={14} className="mr-2 text-gray-400" />
+                    <span>Technical Consulting</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Project Inquiry Form */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-6">Send a Message</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-6">Project Details</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -238,7 +253,7 @@ ${formData.message}
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
-                      placeholder="Company, Foundation, etc."
+                      placeholder="Company or Business"
                     />
                   </div>
                 </div>
@@ -254,23 +269,23 @@ ${formData.message}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
-                    placeholder="john@organization.com"
+                    placeholder="john@company.com"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Interest Type *
+                    Project Type *
                   </label>
                   <select
-                    name="interest"
-                    value={formData.interest}
+                    name="projectType"
+                    value={formData.projectType}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
                   >
-                    <option value="">Select interest type</option>
-                    {interestTypes.map((type) => (
+                    <option value="">Select project type</option>
+                    {projectTypes.map((type) => (
                       <option key={type} value={type}>{type}</option>
                     ))}
                   </select>
@@ -278,7 +293,7 @@ ${formData.message}
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                    Project Details *
                   </label>
                   <textarea
                     name="message"
@@ -287,7 +302,7 @@ ${formData.message}
                     required
                     rows={4}
                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition resize-none"
-                    placeholder="Please describe your interest, including any specific details about partnership, investment, or collaboration opportunities..."
+                    placeholder="Please describe your project requirements, timeline, and any specific technical needs..."
                   />
                 </div>
 
@@ -320,8 +335,8 @@ ${formData.message}
 
                 <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
                   <p className="text-xs text-blue-800 text-center">
-                    <strong>Note:</strong> After submitting, WhatsApp will open with your message pre-filled. 
-                    You can review and edit the message before sending it to us.
+                    <strong>Note:</strong> After submitting, WhatsApp will open with your project details pre-filled. 
+                    You can review and edit the message before sending it to our team.
                   </p>
                 </div>
               </form>

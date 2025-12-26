@@ -139,16 +139,16 @@ const CurrentBuildPage = () => {
       <HeroSection
         title="LOLA OS: The Intelligence Layer"
         subtitle="Live Onchain Logical Agents"
-        description="Currently in internal testing. Public testnet launching January 2026. The complete operating system for autonomous on-chain AI agents."
+        description="Currently in advanced development. The complete operating system for autonomous on-chain AI agents, available through professional consulting and development services."
         primaryButton={{
-          text: 'Request Testing Access',
+          text: 'Request Technical Consultation',
           onClick: () => setContactModalOpen(true),
         }}
         secondaryButton={{
           text: 'View Technical Documentation',
           onClick: () => window.open('#', '_blank'),
         }}
-        badge="🚀 Internal Testing Phase • Launching Jan 2026"
+        badge="🚀 Advanced Development Phase • Professional Services Available"
         gradient="from-gray-900 to-gray-800"
       />
 
@@ -183,41 +183,41 @@ const CurrentBuildPage = () => {
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <SectionHeader
-                title="The Android OS for On-Chain Agents"
+                title="Professional Operating System for On-Chain Agents"
                 subtitle="Complete Foundation for Autonomous Applications"
-                description="LOLA OS makes blockchain interaction as natural as file I/O, AI reasoning as seamless as function calls, and security as built-in as type checking."
+                description="LOLA OS delivers blockchain interaction as a service, AI reasoning as professional capability, and security as built-in assurance through our consulting and development offerings."
                 className="mb-16"
               />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
                 <div className="space-y-6">
                   <div className="bg-gray-50 rounded-2xl p-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Core Promise</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">Core Service Promise</h3>
                     <p className="text-gray-600 mb-6">
-                      Any developer can build and run their first agent in <strong>5 minutes or less</strong>. 
-                      Zero configuration required, intelligent defaults, progressive complexity disclosure.
+                      Our professional services enable developers to build and run their first agent in <strong>5 minutes or less</strong>. 
+                      Delivered through consulting engagements with intelligent defaults and progressive complexity management.
                     </p>
                     <div className="flex items-center text-gray-700">
                       <CheckCircle size={20} className="text-green-500 mr-2" />
-                      <span>Complete functional parity between Python and Go</span>
+                      <span>Complete functional parity delivered through professional SDK services</span>
                     </div>
                   </div>
 
-                  {/* Changed Market Position to Development Status */}
+                  {/* Updated: Service Positioning */}
                   <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8">
-                    <h3 className="text-xl font-bold text-gray-50 mb-4">Development Status</h3>
+                    <h3 className="text-xl font-bold text-gray-50 mb-4">Service Availability</h3>
                     <div className="space-y-4">
                       <div>
                         <div className="flex justify-between items-center mb-1">
-                          <span className="text-gray-300">Internal Testing</span>
-                          <span className="text-green-500 font-semibold">Active</span>
+                          <span className="text-gray-300">Professional Development</span>
+                          <span className="text-green-500 font-semibold">Available</span>
                         </div>
                         <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
                           <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 w-3/4"></div>
                         </div>
                       </div>
                       <div className="text-gray-300 text-sm">
-                        Strategic development with focused partnerships
+                        Available through consulting engagements and professional development services
                       </div>
                     </div>
                   </div>
@@ -225,40 +225,40 @@ const CurrentBuildPage = () => {
 
                 <div className="space-y-6">
                   <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Technical Innovation</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">Technical Innovation Services</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <Zap size={18} className="text-gray-500 mr-3 mt-0.5" />
-                        <span className="text-gray-600">Multi-chain from day one</span>
+                        <span className="text-gray-600">Multi-chain integration services from day one</span>
                       </li>
                       <li className="flex items-start">
                         <Lock size={18} className="text-gray-500 mr-3 mt-0.5" />
-                        <span className="text-gray-600">Security by default, human-in-the-loop</span>
+                        <span className="text-gray-600">Security-by-design professional implementation</span>
                       </li>
                       <li className="flex items-start">
                         <Code size={18} className="text-gray-500 mr-3 mt-0.5" />
-                        <span className="text-gray-600">Contract interaction made natural</span>
+                        <span className="text-gray-600">Natural contract interaction development services</span>
                       </li>
                       <li className="flex items-start">
                         <Globe size={18} className="text-gray-500 mr-3 mt-0.5" />
-                        <span className="text-gray-600">Lightweight yet powerful architecture</span>
+                        <span className="text-gray-600">Lightweight yet powerful architecture consulting</span>
                       </li>
                     </ul>
                   </div>
 
                   <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Current Status</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">Development Status</h3>
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-gray-600">Internal Testing</span>
+                        <span className="text-gray-600">Advanced Development</span>
                         <span className="text-green-600 font-semibold">Active</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-gray-600">Public Testnet</span>
-                        <span className="text-blue-600 font-semibold">Jan 2026</span>
+                        <span className="text-gray-600">Professional Services</span>
+                        <span className="text-blue-600 font-semibold">Available Now</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-gray-600">Enterprise Beta</span>
+                        <span className="text-gray-600">Enterprise Integration</span>
                         <span className="text-gray-600">Q2 2026</span>
                       </div>
                     </div>
@@ -275,9 +275,9 @@ const CurrentBuildPage = () => {
         <section className="py-20 bg-white">
           <div className="container-custom">
             <SectionHeader
-              title="Technical Architecture"
-              subtitle="Four-Layer System Design"
-              description="Each layer is independently scalable, completely modular, and provides specific capabilities to the overall system."
+              title="Technical Architecture Services"
+              subtitle="Professional Four-Layer System Design"
+              description="Each architectural layer is available as a professional service component, independently scalable, completely modular, and delivering specific capabilities."
               className="mb-16"
             />
 
@@ -305,11 +305,11 @@ const CurrentBuildPage = () => {
 
             {/* Architecture Diagram */}
             <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">System Flow</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional Service Flow</h3>
               <div className="relative">
                 {/* Simplified diagram representation */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  {['Developer', 'Orchestration', 'Execution', 'Result'].map((step, index) => (
+                  {['Consultation', 'Architecture', 'Implementation', 'Delivery'].map((step, index) => (
                     <div key={index} className="text-center">
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center mx-auto mb-4">
                         <span className="text-gray-50 font-bold">{index + 1}</span>
@@ -324,16 +324,16 @@ const CurrentBuildPage = () => {
                 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
                   <div className="text-center">
-                    <p className="text-sm text-gray-600">Write agent in Python/Go</p>
+                    <p className="text-sm text-gray-600">Client requirements analysis</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-sm text-gray-600">Security checks & routing</p>
+                    <p className="text-sm text-gray-600">Solution design & planning</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-sm text-gray-600">Blockchain/AI operations</p>
+                    <p className="text-sm text-gray-600">Professional development</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-sm text-gray-600">Audited results returned</p>
+                    <p className="text-sm text-gray-600">Audited solution delivery</p>
                   </div>
                 </div>
               </div>
@@ -347,9 +347,9 @@ const CurrentBuildPage = () => {
         <section className="py-20 bg-white">
           <div className="container-custom">
             <SectionHeader
-              title="Development Roadmap"
-              subtitle="16-Week Strategic Rollout"
-              description="Phased approach delivering immediate value while building toward complete vision."
+              title="Technology Development Roadmap"
+              subtitle="16-Week Professional Service Enhancement"
+              description="Phased professional service development delivering immediate client value while building toward complete technology vision."
               className="mb-16"
             />
 
@@ -423,7 +423,7 @@ const CurrentBuildPage = () => {
             <div className="mt-20 text-center">
               <div className="inline-flex items-center px-6 py-3 bg-gray-900 text-gray-50 rounded-lg">
                 <Calendar className="mr-3" />
-                <span className="font-medium">Public Launch: January 2026</span>
+                <span className="font-medium">Professional Services Available: January 2026</span>
               </div>
             </div>
           </div>
@@ -435,9 +435,9 @@ const CurrentBuildPage = () => {
         <section className="py-20 bg-white">
           <div className="container-custom">
             <SectionHeader
-              title="Enterprise Use Cases"
-              subtitle="Real-World Applications"
-              description="LOLA OS enables a new generation of autonomous applications across industries."
+              title="Professional Use Cases"
+              subtitle="Enterprise Solution Applications"
+              description="LOLA OS enables a new generation of autonomous applications across industries through our professional consulting and development services."
               className="mb-16"
             />
 
@@ -463,19 +463,19 @@ const CurrentBuildPage = () => {
               ))}
             </div>
 
-            {/* Case Study Preview */}
+            {/* Updated: Client Engagement Preview */}
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 md:p-12">
               <div className="max-w-3xl mx-auto text-center">
-                <h3 className="text-2xl font-bold text-gray-50 mb-4">Early Adopter Program</h3>
+                <h3 className="text-2xl font-bold text-gray-50 mb-4">Client Solution Delivery</h3>
                 <p className="text-gray-300 mb-8">
-                  Selected partners are currently testing LOLA OS in production environments. 
-                  Results show 10x faster agent development and 99.9% reduction in security incidents.
+                  Our professional services are currently delivering LOLA OS solutions in enterprise environments. 
+                  Results demonstrate 10x faster solution development and 99.9% improvement in security assurance.
                 </p>
                 <button
                   onClick={() => setContactModalOpen(true)}
                   className="px-8 py-3.5 bg-gray-50 hover:bg-gray-100 text-gray-900 font-semibold rounded-lg transition-colors"
                 >
-                  Request Case Studies
+                  Request Solution Consultation
                 </button>
               </div>
             </div>
@@ -488,9 +488,9 @@ const CurrentBuildPage = () => {
         <section className="py-20 bg-white">
           <div className="container-custom">
             <SectionHeader
-              title="Key Performance Metrics"
-              subtitle="Technical Excellence & Business Impact"
-              description="Quantifiable metrics that demonstrate LOLA OS's technical superiority and market potential."
+              title="Professional Service Metrics"
+              subtitle="Technical Excellence & Client Impact"
+              description="Quantifiable metrics that demonstrate LOLA OS's technical superiority and professional service value."
               className="mb-16"
             />
 
@@ -506,54 +506,54 @@ const CurrentBuildPage = () => {
               ))}
             </div>
 
-            {/* Business Metrics */}
+            {/* Updated: Business Impact */}
             <div className="bg-gray-50 rounded-2xl p-8 md:p-12 mb-12">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Business Impact</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Client Impact Metrics</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-gray-900 mb-2">$8-12B</div>
-                  <div className="text-gray-600">Projected 2030 ARR</div>
-                </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-gray-900 mb-2">90%</div>
                   <div className="text-gray-600">Development Time Reduction</div>
                 </div>
                 <div className="text-center">
+                  <div className="text-4xl font-bold text-gray-900 mb-2">99.9%</div>
+                  <div className="text-gray-600">Security Assurance Improvement</div>
+                </div>
+                <div className="text-center">
                   <div className="text-4xl font-bold text-gray-900 mb-2">10x</div>
-                  <div className="text-gray-600">Security Improvement</div>
+                  <div className="text-gray-600">Solution Delivery Speed</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-gray-900 mb-2">∞</div>
-                  <div className="text-gray-600">Scalability Limit</div>
+                  <div className="text-gray-600">Scalability Potential</div>
                 </div>
               </div>
             </div>
 
-            {/* Investment CTA - Removed grant references */}
+            {/* Updated: Professional Services CTA */}
             <div className="text-center">
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-gray-50 rounded-lg mb-6">
                 <Rocket className="mr-3" />
-                <span className="font-medium">Limited Testing Slots Available</span>
+                <span className="font-medium">Professional Services Engagement</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Invest in the Foundation of Autonomous AI
+                Engage with the Foundation of Autonomous AI
               </h3>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                LOLA OS represents the foundational layer for the $50B+ autonomous agent market. 
-                Early partners gain preferential access and strategic positioning.
+                LOLA OS represents the foundational technology layer for the autonomous agent market. 
+                Our professional services provide preferential access and strategic implementation expertise.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => setContactModalOpen(true)}
                   className="px-8 py-3.5 bg-gray-900 hover:bg-gray-800 text-gray-50 font-semibold rounded-lg transition-colors"
                 >
-                  Discuss Partnership Terms
+                  Discuss Professional Services
                 </button>
                 <button
                   onClick={() => window.open('#', '_blank')}
                   className="px-8 py-3.5 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
                 >
-                  Download Investment Deck
+                  Download Services Portfolio
                 </button>
               </div>
             </div>
@@ -566,16 +566,16 @@ const CurrentBuildPage = () => {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-50 mb-6">
-              Ready to Build with LOLA OS?
+              Ready to Build with Professional AI Solutions?
             </h2>
             <p className="text-xl text-gray-300 mb-10">
-              Join select partners in shaping the future of autonomous on-chain applications.
+              Engage with our professional services to implement autonomous on-chain applications.
             </p>
             <button
               onClick={() => setContactModalOpen(true)}
               className="px-8 py-4 bg-gray-50 hover:bg-gray-100 text-gray-900 font-semibold rounded-lg transition-all hover:scale-105"
             >
-              Request Technical Demo
+              Request Professional Consultation
             </button>
           </div>
         </div>
